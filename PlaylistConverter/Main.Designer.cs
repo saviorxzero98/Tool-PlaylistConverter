@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.InputFolderLabel = new System.Windows.Forms.Label();
             this.OutputFolderLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -200,8 +201,6 @@
             // 
             this.InputBasePathText.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.InputBasePathText.FormattingEnabled = true;
-            this.InputBasePathText.Items.AddRange(new object[] {
-            "${Path}"});
             this.InputBasePathText.Location = new System.Drawing.Point(135, 81);
             this.InputBasePathText.Name = "InputBasePathText";
             this.InputBasePathText.Size = new System.Drawing.Size(587, 28);
@@ -211,8 +210,6 @@
             // 
             this.OutputBasePathText.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.OutputBasePathText.FormattingEnabled = true;
-            this.OutputBasePathText.Items.AddRange(new object[] {
-            "${Path}"});
             this.OutputBasePathText.Location = new System.Drawing.Point(134, 117);
             this.OutputBasePathText.Name = "OutputBasePathText";
             this.OutputBasePathText.Size = new System.Drawing.Size(587, 28);
@@ -262,6 +259,7 @@
             this.Controls.Add(this.OutputFolderLabel);
             this.Controls.Add(this.InputFolderLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "播放清單轉換";
