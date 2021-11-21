@@ -38,17 +38,8 @@
             this.InputFolderBtn = new System.Windows.Forms.Button();
             this.OutputFolderBtn = new System.Windows.Forms.Button();
             this.ConvertBtn = new System.Windows.Forms.Button();
-            this.WindowsBaseType = new System.Windows.Forms.RadioButton();
-            this.LinuxBaseType = new System.Windows.Forms.RadioButton();
-            this.ExtM3UCheck = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.OutputExtendType = new System.Windows.Forms.ComboBox();
             this.InputBasePathText = new System.Windows.Forms.ComboBox();
-            this.OutputBasePathText = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.MusicFileExtendType = new System.Windows.Forms.ComboBox();
+            this.ConfigProfile = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // InputFolderLabel
@@ -87,9 +78,9 @@
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.Location = new System.Drawing.Point(13, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 24);
+            this.label4.Size = new System.Drawing.Size(86, 24);
             this.label4.TabIndex = 3;
-            this.label4.Text = "輸出根目錄：";
+            this.label4.Text = "設定檔：";
             // 
             // InputFolderText
             // 
@@ -132,72 +123,13 @@
             // ConvertBtn
             // 
             this.ConvertBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ConvertBtn.Location = new System.Drawing.Point(603, 259);
+            this.ConvertBtn.Location = new System.Drawing.Point(133, 164);
             this.ConvertBtn.Name = "ConvertBtn";
-            this.ConvertBtn.Size = new System.Drawing.Size(119, 32);
+            this.ConvertBtn.Size = new System.Drawing.Size(588, 32);
             this.ConvertBtn.TabIndex = 6;
             this.ConvertBtn.Text = "轉換";
             this.ConvertBtn.UseVisualStyleBackColor = true;
             this.ConvertBtn.Click += new System.EventHandler(this.ConvertBtn_Click);
-            // 
-            // WindowsBaseType
-            // 
-            this.WindowsBaseType.AutoSize = true;
-            this.WindowsBaseType.Checked = true;
-            this.WindowsBaseType.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.WindowsBaseType.Location = new System.Drawing.Point(134, 193);
-            this.WindowsBaseType.Name = "WindowsBaseType";
-            this.WindowsBaseType.Size = new System.Drawing.Size(89, 24);
-            this.WindowsBaseType.TabIndex = 7;
-            this.WindowsBaseType.TabStop = true;
-            this.WindowsBaseType.Text = "Window";
-            this.WindowsBaseType.UseVisualStyleBackColor = true;
-            // 
-            // LinuxBaseType
-            // 
-            this.LinuxBaseType.AutoSize = true;
-            this.LinuxBaseType.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LinuxBaseType.Location = new System.Drawing.Point(229, 193);
-            this.LinuxBaseType.Name = "LinuxBaseType";
-            this.LinuxBaseType.Size = new System.Drawing.Size(143, 24);
-            this.LinuxBaseType.TabIndex = 7;
-            this.LinuxBaseType.Text = "Linux / Android";
-            this.LinuxBaseType.UseVisualStyleBackColor = true;
-            // 
-            // ExtM3UCheck
-            // 
-            this.ExtM3UCheck.AutoSize = true;
-            this.ExtM3UCheck.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ExtM3UCheck.Location = new System.Drawing.Point(134, 228);
-            this.ExtM3UCheck.Name = "ExtM3UCheck";
-            this.ExtM3UCheck.Size = new System.Drawing.Size(120, 24);
-            this.ExtM3UCheck.TabIndex = 8;
-            this.ExtM3UCheck.Text = "Extend M3U";
-            this.ExtM3UCheck.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(13, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "輸出副檔名：";
-            // 
-            // OutputExtendType
-            // 
-            this.OutputExtendType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.OutputExtendType.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.OutputExtendType.FormattingEnabled = true;
-            this.OutputExtendType.Items.AddRange(new object[] {
-            "M3U8",
-            "M3U",
-            "TXT"});
-            this.OutputExtendType.Location = new System.Drawing.Point(134, 153);
-            this.OutputExtendType.Name = "OutputExtendType";
-            this.OutputExtendType.Size = new System.Drawing.Size(247, 28);
-            this.OutputExtendType.TabIndex = 9;
             // 
             // InputBasePathText
             // 
@@ -208,79 +140,27 @@
             this.InputBasePathText.Size = new System.Drawing.Size(587, 28);
             this.InputBasePathText.TabIndex = 10;
             // 
-            // OutputBasePathText
+            // ConfigProfile
             // 
-            this.OutputBasePathText.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.OutputBasePathText.FormattingEnabled = true;
-            this.OutputBasePathText.Location = new System.Drawing.Point(134, 117);
-            this.OutputBasePathText.Name = "OutputBasePathText";
-            this.OutputBasePathText.Size = new System.Drawing.Size(587, 28);
-            this.OutputBasePathText.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(13, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "路徑格式：";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(13, 226);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 24);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "檔案標頭：";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(13, 263);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "音樂副檔名：";
-            // 
-            // MusicFileExtendType
-            // 
-            this.MusicFileExtendType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MusicFileExtendType.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.MusicFileExtendType.FormattingEnabled = true;
-            this.MusicFileExtendType.Items.AddRange(new object[] {
-            "WMA",
-            "MP3"});
-            this.MusicFileExtendType.Location = new System.Drawing.Point(134, 259);
-            this.MusicFileExtendType.Name = "MusicFileExtendType";
-            this.MusicFileExtendType.Size = new System.Drawing.Size(247, 28);
-            this.MusicFileExtendType.TabIndex = 13;
+            this.ConfigProfile.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ConfigProfile.FormattingEnabled = true;
+            this.ConfigProfile.Location = new System.Drawing.Point(134, 117);
+            this.ConfigProfile.Name = "ConfigProfile";
+            this.ConfigProfile.Size = new System.Drawing.Size(587, 28);
+            this.ConfigProfile.TabIndex = 11;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 300);
-            this.Controls.Add(this.MusicFileExtendType);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.OutputBasePathText);
+            this.ClientSize = new System.Drawing.Size(734, 208);
+            this.Controls.Add(this.ConfigProfile);
             this.Controls.Add(this.InputBasePathText);
-            this.Controls.Add(this.OutputExtendType);
-            this.Controls.Add(this.ExtM3UCheck);
-            this.Controls.Add(this.LinuxBaseType);
-            this.Controls.Add(this.WindowsBaseType);
             this.Controls.Add(this.ConvertBtn);
             this.Controls.Add(this.OutputFolderBtn);
             this.Controls.Add(this.InputFolderBtn);
             this.Controls.Add(this.OutputFolderText);
             this.Controls.Add(this.InputFolderText);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.OutputFolderLabel);
@@ -306,17 +186,8 @@
         private System.Windows.Forms.Button InputFolderBtn;
         private System.Windows.Forms.Button OutputFolderBtn;
         private System.Windows.Forms.Button ConvertBtn;
-        private System.Windows.Forms.RadioButton WindowsBaseType;
-        private System.Windows.Forms.RadioButton LinuxBaseType;
-        private System.Windows.Forms.CheckBox ExtM3UCheck;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox OutputExtendType;
         private System.Windows.Forms.ComboBox InputBasePathText;
-        private System.Windows.Forms.ComboBox OutputBasePathText;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox MusicFileExtendType;
+        private System.Windows.Forms.ComboBox ConfigProfile;
     }
 }
 
