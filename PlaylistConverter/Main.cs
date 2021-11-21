@@ -51,6 +51,7 @@ namespace PlaylistConverter
             InitializeComponent();
             InputFolderText.Select();
             OutputExtendType.SelectedIndex = 0;
+            MusicFileExtendType.SelectedIndex = 0;
 
             BasePaths = ReadSetting();
 
@@ -168,6 +169,8 @@ namespace PlaylistConverter
 
                     if (WindowsBaseType.Checked) outputLine = outputLine.Replace('/', '\\');
                     if (LinuxBaseType.Checked) outputLine = outputLine.Replace('\\', '/');
+                    if (MusicFileExtendType.Text == "WMA") outputLine = outputLine.Replace(".mp3", ".wma");
+                    if (MusicFileExtendType.Text == "MP3") outputLine = outputLine.Replace(".wma", ".mp3");
 
                     writer.WriteLine(outputLine);
                 }

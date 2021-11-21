@@ -47,6 +47,8 @@
             this.OutputBasePathText = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.MusicFileExtendType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // InputFolderLabel
@@ -130,7 +132,7 @@
             // ConvertBtn
             // 
             this.ConvertBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ConvertBtn.Location = new System.Drawing.Point(602, 218);
+            this.ConvertBtn.Location = new System.Drawing.Point(603, 259);
             this.ConvertBtn.Name = "ConvertBtn";
             this.ConvertBtn.Size = new System.Drawing.Size(119, 32);
             this.ConvertBtn.TabIndex = 6;
@@ -235,11 +237,36 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "檔案標頭：";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(13, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 24);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "音樂副檔名：";
+            // 
+            // MusicFileExtendType
+            // 
+            this.MusicFileExtendType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MusicFileExtendType.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MusicFileExtendType.FormattingEnabled = true;
+            this.MusicFileExtendType.Items.AddRange(new object[] {
+            "WMA",
+            "MP3"});
+            this.MusicFileExtendType.Location = new System.Drawing.Point(134, 259);
+            this.MusicFileExtendType.Name = "MusicFileExtendType";
+            this.MusicFileExtendType.Size = new System.Drawing.Size(247, 28);
+            this.MusicFileExtendType.TabIndex = 13;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 262);
+            this.ClientSize = new System.Drawing.Size(734, 300);
+            this.Controls.Add(this.MusicFileExtendType);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.OutputBasePathText);
             this.Controls.Add(this.InputBasePathText);
             this.Controls.Add(this.OutputExtendType);
@@ -288,6 +315,8 @@
         private System.Windows.Forms.ComboBox OutputBasePathText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox MusicFileExtendType;
     }
 }
 
