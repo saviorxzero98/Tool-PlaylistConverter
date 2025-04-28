@@ -1,4 +1,4 @@
-﻿namespace PlaylistConverter
+﻿namespace PlaylistPathConverters.WinApp
 {
     partial class Main
     {
@@ -10,7 +10,7 @@
         /// <summary>
         /// 清除任何使用中的資源。
         /// </summary>
-        /// <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        /// <param name="disposing">如果應該處置受控資源則為 true，否則為 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))

@@ -1,1 +1,1 @@
-# 播放清單 GUI 轉換工具
+# Playlist Converter

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C501648D-2245-4F04-BF50-CA4778B971B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistPathConverters.Core", "src\PlaylistPathConverters.Core\PlaylistPathConverters.Core.csproj", "{21542886-121A-453F-BC22-CBF581E466C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistPathConverters.WinApp", "src\PlaylistPathConverters.WinApp\PlaylistPathConverters.WinApp.csproj", "{9DDE525F-7A38-4A35-8D8E-ECEC58EEBD5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistPathConverters.ConsoleApp", "src\PlaylistPathConverters.ConsoleApp\PlaylistPathConverters.ConsoleApp.csproj", "{AD401077-1D8F-4D0A-9885-474B04C741E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21542886-121A-453F-BC22-CBF581E466C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21542886-121A-453F-BC22-CBF581E466C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21542886-121A-453F-BC22-CBF581E466C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21542886-121A-453F-BC22-CBF581E466C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDE525F-7A38-4A35-8D8E-ECEC58EEBD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDE525F-7A38-4A35-8D8E-ECEC58EEBD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDE525F-7A38-4A35-8D8E-ECEC58EEBD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDE525F-7A38-4A35-8D8E-ECEC58EEBD5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD401077-1D8F-4D0A-9885-474B04C741E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD401077-1D8F-4D0A-9885-474B04C741E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD401077-1D8F-4D0A-9885-474B04C741E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD401077-1D8F-4D0A-9885-474B04C741E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21542886-121A-453F-BC22-CBF581E466C9} = {C501648D-2245-4F04-BF50-CA4778B971B4}
+		{9DDE525F-7A38-4A35-8D8E-ECEC58EEBD5F} = {C501648D-2245-4F04-BF50-CA4778B971B4}
+		{AD401077-1D8F-4D0A-9885-474B04C741E0} = {C501648D-2245-4F04-BF50-CA4778B971B4}
+	EndGlobalSection
+EndGlobal

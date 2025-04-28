@@ -1,3 +1,9 @@
+**/Release
+**/Debug
+**/obj
+**/.vs
+**/packages
+**/bin
 *.suo
 */obj
 */bin
