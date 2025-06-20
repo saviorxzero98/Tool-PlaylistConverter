@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Configuration;
 using PlaylistPathConverters.Core.Converters;
 using PlaylistPathConverters.Core.Settings;
 using System;
@@ -63,15 +63,26 @@ namespace PlaylistPathConverters.WinApp
         /// </summary>
         private void ReadConfig()
         {
-            if (File.Exists(ConfigFile))
-            {
-                using (StreamReader reader = new StreamReader(ConfigFile))
-                {
-                    string settingJson = reader.ReadToEnd();
-                    Config = JsonConvert.DeserializeObject<AppSetting>(settingJson);
-                }
-            }
+            var configuration = GetConfiguration();
+            Config = configuration.Get<AppSetting>();
         }
+
+        /// <summary>
+        /// 建立 IConfiguration
+        /// </summary>
+        /// <returns></returns>
+        private IConfiguration GetConfiguration()
+        {
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json",
+                                                                optional: true,
+                                                                reloadOnChange: true)
+                                                   .AddJsonFile("appsettings.development.json",
+                                                                optional: true,
+                                                                reloadOnChange: true)
+                                                   .Build();
+            return config;
+        }
+
 
         #region Event
 

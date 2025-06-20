@@ -16,6 +16,9 @@ namespace PlaylistPathConverters.ConsoleApp
             var config = new ConfigurationBuilder().AddJsonFile("appsettings.json",
                                                                 optional: true,
                                                                 reloadOnChange: true)
+                                                   .AddJsonFile("appsettings.development.json",
+                                                                optional: true,
+                                                                reloadOnChange: true)
                                                    .Build();
             return config;
         }
