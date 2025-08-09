@@ -26,19 +26,23 @@ namespace PlaylistPathConverters.ConsoleApp
             var inputFolder = PromptInputFolder(settings);
             var outputFolder = PromptOutputFolder(settings);
             var inputFileRoot = PromptPlaylistFilePath(settings);
-            var profile = PromptSelectOutputProfile(settings);
 
-            if (profile == null)
+            while (true)
             {
-                return;
+                var profile = PromptSelectOutputProfile(settings);
+
+                if (profile == null)
+                {
+                    return;
+                }
+
+                var converter = new PlaylistConverter(inputFolder, outputFolder);
+                var options = new ConvertOptions(inputFileRoot, profile);
+                var result = converter.Convert(options);
+
+                var message = string.Format("總共：{0}；成功：{1}", result.TotalCount, result.SuccessCount);
+                AnsiConsole.MarkupLine(message);
             }
-
-            var converter = new PlaylistConverter(inputFolder, outputFolder);
-            var options = new ConvertOptions(inputFileRoot, profile);
-            var result = converter.Convert(options);
-
-            var message = string.Format("總共：{0}；成功：{1}", result.TotalCount, result.SuccessCount);
-            AnsiConsole.MarkupLine(message);
         }
 
         protected string PromptInputFolder(AppSetting setting)
