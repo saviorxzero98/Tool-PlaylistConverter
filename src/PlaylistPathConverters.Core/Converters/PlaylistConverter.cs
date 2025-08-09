@@ -45,7 +45,7 @@ namespace PlaylistPathConverters.Core.Converters
 
                     var outputLines = ConvertLines(inputLines, options);
 
-                    var outputFile = GetOutputFilePath(InputFolder, inputFile, OutputFolder);
+                    var outputFile = GetOutputFilePath(InputFolder, inputFile, OutputFolder, options);
 
                     var isSuccess = WriteFileLines(outputLines, outputFile);
                     if (isSuccess)
@@ -176,8 +176,9 @@ namespace PlaylistPathConverters.Core.Converters
         /// <param name="inputFolder"></param>
         /// <param name="inputFilePath"></param>
         /// <param name="outputFolder"></param>
+        /// <param name="options"></param>
         /// <returns></returns>
-        protected virtual string GetOutputFilePath(string inputFolder, string inputFilePath, string outputFolder)
+        protected virtual string GetOutputFilePath(string inputFolder, string inputFilePath, string outputFolder, ConvertOptions options)
         {
             string relativePath = PathHelper.GetRelativePath(inputFilePath, inputFolder);
 
@@ -189,7 +190,7 @@ namespace PlaylistPathConverters.Core.Converters
                 Directory.CreateDirectory(destinationFolder);
             }
 
-            return outputFilePath;
+            return Path.ChangeExtension(outputFilePath, options.PlaylistExtension.ToLower());
         }
 
         /// <summary>
